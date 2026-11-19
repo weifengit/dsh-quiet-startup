@@ -1,0 +1,5 @@
+# quiet-startup bundle patch：挂一行宿主插件，安装时过滤启动期噪声。
+# 装法见 README（profile 里 link 本目录并把包名加进 dsh.profile.bundles）。
+- insert:
+    - id: quiet-startup
+      name: dsh-quiet-startup
