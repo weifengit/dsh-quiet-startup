@@ -2,7 +2,6 @@
   "name": "dsh-quiet-startup",
   "version": "0.1.0",
   "description": "Quiet the known-benign stderr noise DSH prints at startup (model-listing success lines, hashline DP-budget notice, model-catalog fallback) and collapse repeated DeepSeek account network failures into one explained line.",
-  "private": true,
   "type": "module",
   "main": "index.js",
   "exports": {
@@ -18,13 +17,21 @@
     "@deepseek-ai/cordis": "*"
   },
   "scripts": {
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "files": [
     "index.js",
-    "src",
+    "src/",
     "cordis.patch.yml",
     "README.md"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weifengit/dsh-quiet-startup.git"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "^0.2.2-rc.2"
+  }
 }
